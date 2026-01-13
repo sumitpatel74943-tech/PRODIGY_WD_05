@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Rain animation -->
+  <div id="rain"></div>
+
+  <!-- Dark overlay -->
+  <div class="bg-overlay"></div>
+
+  <div class="container">
+
+    <h1 class="title">Weather App</h1>
+
+    <!-- Search -->
+    <div class="search-box">
+      <input type="text" id="city-input" placeholder="Search city..." />
+      <button id="search-btn">Search</button>
+      <button id="unit-toggle">°C</button>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader"></div>
+
+    <!-- Current Weather -->
+    <div id="weather-info" class="weather-card">
+      <h2 id="city-name"></h2>
+      <p id="country-name"></p>
+
+      <div id="date" class="digital-clock"></div>
+
+      <div class="main-temp">
+        <img id="weather-icon" />
+        <span id="temperature" class="temp">--°</span>
+      </div>
+
+      <p id="description"></p>
+      <p id="wind-speed"></p>
+    </div>
+
+    <!-- 5 Day Forecast -->
+    <div class="forecast-section">
+      <h3>5-Day Forecast</h3>
+      <div id="forecast-cards" class="forecast-cards"></div>
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

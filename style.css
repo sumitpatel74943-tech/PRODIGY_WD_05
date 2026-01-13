@@ -1,0 +1,158 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Overlay */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+
+/* Rain animation */
+#rain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+  z-index: 1;
+}
+
+.drop {
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  background: rgba(255,255,255,0.6);
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to { transform: translateY(110vh); }
+}
+
+/* Container */
+.container {
+  width: 380px;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Title */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.search-box button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  background: #0066ff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Loader */
+.loader {
+  display: none;
+  margin: 15px auto;
+  border: 5px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Weather card */
+.weather-card {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+  display: none;
+}
+
+/* Clock */
+.digital-clock {
+  margin: 8px 0;
+  padding: 6px 12px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* Temperature */
+.main-temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#weather-icon {
+  width: 80px;
+}
+
+.temp {
+  font-size: 70px;
+  font-weight: 800;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Forecast */
+.forecast-section {
+  margin-top: 18px;
+}
+
+.forecast-cards {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 10px 5px;
+}
+
+.forecast-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.forecast-card {
+  min-width: 90px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 14px;
+  padding: 10px;
+  text-align: center;
+}
